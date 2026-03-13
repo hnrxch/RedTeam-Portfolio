@@ -1,4 +1,4 @@
-# Cybersecurity-Portfolio
+# RedTeam-Portfolio
 This repository contains my Red team Cybersecurity learning journey
 
 ## Platforms
