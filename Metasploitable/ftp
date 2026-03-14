@@ -1,1 +1,21 @@
+## Enumeration
 
+1- FTP service running on port 21:
+Service detected: vsftpd 2.3.4
+  This version contains a backdoor vulnerability that can be triggered by sending a username ending with ':)'.
+  When triggered, the server opens a shell on port 6200.
+
+## Exploitation:
+-Connected to FTP service:
+  ftp 192.168.x.x
+
+-Login attempt using a random username ending with ':)' and a random password.
+
+-After sending the random credentials, the backdoor is triggered, then connect to the backdoor shell using netcar trough the port '6200'
+  nc 192.168.x.x 6200
+
+shell access obtained.
+
+## Privilege Escalation
+
+The backdoor provides direct root access, no additional privilege escalation needed.
